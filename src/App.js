@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Dish Searching App</h1>
+      <div className="heading">Dish Searching App</div>
       <form onSubmit={onSubmit} className="search-form">
         {alert !== "" && <Alert alert={alert} />}
         <input

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
 
 * {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -11,6 +11,7 @@
 
 html {
   font-size: 65%;
+  background-image: linear-gradient(90deg, #101010 40%, #0d001a 100%);
 }
 
 .App {
@@ -19,47 +20,38 @@ html {
   width: auto;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(
-    90deg,
-    #7489c5 0%,
-    #cb94ef 36%,
-    #41e0e7 70%,
-    #28f6c2 100%
-  );
+
 }
 
-h1 {
-  font-size: 8rem;
-  letter-spacing: 0.1rem;
-  font-style: italic;
-  color: #ffffda;
+.heading {
+  background: linear-gradient(to right, #ff00cc 0%, #2657eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  margin: 4rem 0;
+  font-size: 7vw;
+  font-family: serif;
+  margin: 20px 0 10px;
 }
 
 .search-form {
-  width: 60rem;
-  height: 10rem;
-  border-radius: 20%;
+  width: 55vw;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
   position: relative;
 }
 
 .alert {
   position: absolute;
-  top: -3rem;
-  left: 0;
+  top: 4rem;
   background-color: rgb(233, 72, 72);
-  width: calc(100% - 0.4rem);
-  border-radius: 0.5rem;
-  padding: 0.2rem;
+  width: calc(100% - 7.3rem);
+  border-radius: 5rem;
 }
 
 .alert h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
@@ -71,12 +63,12 @@ h1 {
   border: none;
   border-bottom: 0.1rem solid #ccc;
   margin: 0 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   height: 3rem;
 }
 
 .search-form input[type="text"] {
-  padding: 0 0.5rem;
+  padding: 0 2rem;
   width: 60%;
   color: #555;
 }
@@ -84,16 +76,17 @@ h1 {
 .search-form input[type="submit"] {
   width: 25%;
   text-transform: uppercase;
-  background: #1da1f2;
+  background: #38b3f9;
   color: #fff;
   font-weight: 900;
 }
 
 .search-form input[type="submit"]:hover {
-  color: blue;
+  color: #ede3f1;
 }
 
 .recipes {
+  margin-top: 10px;
   width: 90%;
   display: flex;
   align-items: center;
@@ -103,15 +96,15 @@ h1 {
 }
 
 .recipe {
-  width: 30rem;
+  width: 33rem;
   margin: 3rem;
   display: flex;
   flex-direction: column;
-  background-color: #d3d3d3;
-  padding: 2rem;
+  background-color: #e0e0ff;
+  padding: 1rem;
   position: relative;
-  border-radius: 0.5rem;
-  box-shadow: 2rem 3rem 5rem #aaa;
+  border-radius: 0.3rem;
+  box-shadow: 1rem 1rem 2rem #161414;
 }
 
 .recipe h2 {
@@ -142,10 +135,19 @@ h1 {
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
-  background-color: #40b48e;
   border: none;
   border-radius: 0.5rem;
   height: 3rem;
+  background-image: linear-gradient(60deg,
+      #FF00CC 0%,
+      #5933c4 40%,
+      #00bbff 100%);
+}
+
+.calories {
+  background-color: #101010;
+  color: #fff;
+  font-size: 1.3rem;
 }
 
 .ingredient-list {
@@ -167,4 +169,38 @@ h1 {
 .ingredient-weight {
   color: #40b48e;
   font-size: 1.3rem;
+}
+
+@media (max-width: 575px) {
+  .heading {
+    width: 95vw;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .search-form {
+    height: 40px;
+    width: 90vw;
+    margin: 2px;
+    align-items: center;
+
+  }
+
+  .recipe {
+    width: 80vh;
+  }
+
+}
+
+@media (max-width: 950.98px) and (min-width: 575px) {
+  .heading {
+    width: 95vw;
+    font-size: 66px;
+    text-align: center;
+  }
+
+  .recipe {
+    width: 35vw;
+    margin: 25px 25px;
+  }
 }

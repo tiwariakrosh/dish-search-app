@@ -9,7 +9,7 @@ const Recipe = ({ recipe }) => {
     <div className="recipe">
       <h2>{label}</h2>
       <img src={image} alt={label} />
-      <p>calories={calories}</p>
+      <p className='calories'>calories={calories}</p>
       <button onClick={() => setShow(!show)}>Ingredients</button>
       {show && <RecipeDetails ingredients={ingredients} />}
     </div>
